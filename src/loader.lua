@@ -26,7 +26,7 @@ local function fetchFile(path, branch)
 	local result = (
 		if not wrapperEnv.DEV_MODE then
 			http_request({
-				Url = string.format("https://raw.githubusercontent.com/shawanakorn-dev/internal-ui/refs/heads/main/%s/%s", branch, path),
+				Url = string.format("https://raw.githubusercontent.com/shawanakorn-dev/internal-ui-test/refs/heads/%s/%s", branch, path),
 				Method = "GET",
 				Headers = {
 					["Content-Type"] = "text/html; charset=utf-8",
