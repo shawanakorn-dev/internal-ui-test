@@ -696,7 +696,7 @@ miscLib.ButtonClickEvent(CloseBtn, Enum.UserInputType.MouseButton1, function()
 	end
 end)
 
-addHoverDesc(HideBtn, "Hides executor. (Alternatively, press F1.)")
+addHoverDesc(HideBtn, "Hides executor. (Alternatively, press Insert.)")
 miscLib.ButtonClickEvent(HideBtn, Enum.UserInputType.MouseButton1, function()
 	executorStates.UIToggled = false
 	toggleUI(executorStates.UIToggled)
@@ -916,7 +916,7 @@ Topbar.Visible, Container.Visible = false, false
 MainUI.Size, MainUI.BorderSizePixel = UDim2.new(), 0
 
 inputService.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.F1 and not inputService:GetFocusedTextBox() then
+	if input.KeyCode == Enum.KeyCode.Insert and not inputService:GetFocusedTextBox() then
 		if (not executorStates.UIToggleDebounce or not executorStates.Loaded) then return end
 
 		local toggleTween = toggleUI(not MainUI.Visible)
